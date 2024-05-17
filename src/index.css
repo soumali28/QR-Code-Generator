@@ -1,13 +1,122 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(53, 27, 158),
+    rgb(56, 130, 199)
+  );
+  padding: 8rem 6rem;
+  text-align: center;
+}
+.header > h1 {
+  color: white;
+  font-size: 3rem;
+}
+.submit_btn {
+  padding: 12px 20px;
+  width: 40%;
+  background-color: rgb(38, 95, 226);
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.submit_btn:hover {
+  background-color: rgb(24, 71, 179);
+}
+
+.qr_generator {
+  background-color: #ffffff;
+  padding: 2rem;
+  transform: translateY(-5rem);
+  width: 60%;
+  display: flex;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px rgb(226, 226, 230);
+}
+
+.qr_generator .qr_searchbox {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.qr_searchbox > label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #3b3b3b;
+  margin-bottom: 20px;
+}
+.qr_searchbox > input[type="text"] {
+  padding: 0.8rem;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.qr_searchbox > p{
+  color: rgb(207, 10, 10);
+}
+.qr_code {
+  margin-left: 2rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.qr_code > h3 {
+  margin-bottom: 20px;
+}
+.qr_code .qr {
+  border: 2px solid #e2e1e1;
+  padding: 15px;
+  box-shadow: 2px 2px 2px rgb(226, 226, 230);
+  border-radius: 5px;
+}
+
+@media screen and (max-width:768px) {
+.header h1{
+  font-size: 2rem;
+}
+  .qr_generator{
+    flex-direction: column;
+    width: 80%;
+  }
+  .qr_generator > .qr_searchbox{
+    width: 100%;
+  }
+  .qr_generator > .qr_code{
+    width: 100%;
+    margin-left: 0;
+  }
+  .qr_generator > .qr_code h3{
+    margin-top: 20px;
+  }
 }
